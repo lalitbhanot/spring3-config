@@ -1,5 +1,6 @@
 server:
   port: 0
+
 eureka:
   client:
     serviceUrl:
@@ -8,3 +9,18 @@ eureka:
     instance-id: ${spring.application.name}:${random.int}
     prefer-ip-address: true
     hostname: localhost
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,env,metrics,beans,loggers,football,prometheus
+  tracing:
+    sampling:
+      probability: 1.0
