@@ -5,13 +5,13 @@ spring:
     gateway:
       routes:
         - id: players
-          uri: lb://footballserver
+          uri: lb://FOOTBALLSERVER
           predicates:
             - Path=/api/players/**
           filters:
             - StripPrefix=1
         - id: albums
-          uri: lb://albumsserver
+          uri: lb://ALBUMSERVER
           predicates:
             - Path=/api/albums/**
           filters:
