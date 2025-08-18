@@ -6,7 +6,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${random.int}
     prefer-ip-address: true
     hostname: localhost
